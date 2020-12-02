@@ -12,7 +12,6 @@ func main() {
 	if err := service(); err != nil {
 		fmt.Printf("original error: type:%T  cause:%v\n", errors.Cause(err), errors.Cause(err))
 		fmt.Printf("stack trace:\n %+v\n", err)
-
 		//比较根因
 		if errors.Is(err, sql.ErrNoRows) {
 			fmt.Println("ErrNoRows")
@@ -24,7 +23,7 @@ func main() {
 //业务逻辑代码调用dao，要记录堆栈信息，方便定位，wrap
 func service() error {
 	if err := dao(); err != nil {
-		return errors.Wrap(err, "dao not found!")
+		return errors.Wrap(err, "service")
 	}
 	return nil
 }
