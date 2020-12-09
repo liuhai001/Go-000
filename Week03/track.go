@@ -66,7 +66,7 @@ func (t *Tracker) ShutDown(ctx context.Context) {
 	}
 }
 
-func main() {
+func Test() {
 	tr := NewTracker()
 	go tr.Run()
 	_ = tr.Event(context.Background(), "test")
