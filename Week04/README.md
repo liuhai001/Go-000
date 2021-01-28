@@ -6,3 +6,8 @@
 2.make build
 
 参考的这位同学：https://github.com/duxin40/Go-000/tree/main/Week04  
+
+
+https://github.com/golang-standards/project-layout/blob/master/README_zh.md
+
+/cmd :项目的主干
